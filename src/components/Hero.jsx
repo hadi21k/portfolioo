@@ -1,16 +1,25 @@
 import { motion, useScroll } from "framer-motion";
-import React, { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import useParallax from "../hooks/useParallax";
 import BlurryBg from "./ui/BlurryBg";
 
 const Hero = () => {
   const ref = useRef();
+  const [width, setwidth] = useState(window.innerWidth);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const y = useParallax(scrollYProgress, 0, 1, "50%");
+  const y = useParallax(scrollYProgress, 0, 1, "125%");
+
+  useEffect(() => {
+    const unsub = window.addEventListener("resize", () => {
+      setwidth(window.innerWidth);
+    });
+
+    return window.removeEventListener("resize", unsub);
+  }, []);
 
   const parent = {
     animate: {
@@ -30,6 +39,7 @@ const Hero = () => {
       delay: 0.3,
       opacity: 1,
       y: 0,
+      zIndex: 1,
     },
   };
 
@@ -40,17 +50,18 @@ const Hero = () => {
       delay: 0.3,
       opacity: 1,
       x: 0,
+      zIndex: 1,
     },
   };
 
   return (
     <div
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-light text-light dark:bg-dark dark:text-dark"
+      className="relative min-h-screen overflow-hidden bg-light pt-[40px] text-light dark:bg-dark dark:text-dark"
     >
       <BlurryBg />
       <motion.div
-        style={{ y }}
+        style={{ y: width > 768 ? y : "" }}
         variants={parent}
         initial="hidden"
         animate="animate"
@@ -58,7 +69,7 @@ const Hero = () => {
       >
         <motion.h1
           variants={children1}
-          className="text-5xl font-extrabold md:text-6xl lg:text-8xl"
+          className="text-6xl font-extrabold md:text-7xl lg:text-8xl"
         >
           Hadi Diab
         </motion.h1>
