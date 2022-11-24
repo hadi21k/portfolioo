@@ -11,7 +11,7 @@ function App() {
   const { dark } = useStore();
 
   return (
-    <div className={`reltive font-sora ${dark ? "dark" : ""}`}>
+    <div className={`font-space ${dark ? "dark" : ""}`}>
       <Routes>
         <Route
           path="/"

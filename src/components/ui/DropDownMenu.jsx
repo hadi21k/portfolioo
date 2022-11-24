@@ -40,7 +40,7 @@ export default function DropDownMenu() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="backdrop-blur-xs absolute right-0 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-light/60 text-light shadow-xl backdrop-filter focus:outline-none dark:bg-dark/90 dark:text-dark">
+        <Menu.Items className="backdrop-blur-xs absolute right-0 mt-4 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-light/90 text-light shadow-xl backdrop-filter focus:outline-none dark:bg-dark/90 dark:text-dark">
           <div className="px-1 py-1">
             {elements.map((element) => (
               <div key={element.name}>

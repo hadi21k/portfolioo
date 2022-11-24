@@ -19,7 +19,7 @@ module.exports = {
         "dark-1": "#000",
       },
       fontFamily: {
-        sora: ["Sora", "sans-serif"],
+        space: ["Space Grotesk", "sans-serif"],
       },
     },
   },

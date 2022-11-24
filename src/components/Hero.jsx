@@ -10,7 +10,7 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useParallax(scrollYProgress, 0, 1, "125%");
+  const y = useParallax(scrollYProgress, 0, 1, "50%");
 
   const parent = {
     animate: {
@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   const children2 = {
-    hidden: { opacity: 0, x: -40 },
+    hidden: { opacity: 0, x: 60 },
     animate: {
       duration: 0.4,
       delay: 0.3,
@@ -46,7 +46,7 @@ const Hero = () => {
   return (
     <div
       ref={ref}
-      className="relative min-h-screen overflow-hidden bg-light pt-[65px] text-light dark:bg-dark dark:text-dark"
+      className="relative min-h-screen overflow-hidden bg-light text-light dark:bg-dark dark:text-dark"
     >
       <BlurryBg />
       <motion.div
