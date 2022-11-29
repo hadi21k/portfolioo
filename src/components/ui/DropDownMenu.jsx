@@ -2,7 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-import { AiFillGithub } from "react-icons/ai";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const elements = [
   {
@@ -26,11 +26,9 @@ const elements = [
 export default function DropDownMenu() {
   return (
     <Menu as="div" className="relative inline-block text-left md:hidden">
-      <div>
-        <Menu.Button className="grid h-9 w-9 place-items-center justify-center rounded-md bg-primary text-light focus:outline-none">
-          <Bars3Icon className="h-6 w-6" />
-        </Menu.Button>
-      </div>
+      <Menu.Button className="grid h-9 w-9 place-items-center justify-center rounded-md bg-primary text-light focus:outline-none">
+        <Bars3Icon className="h-6 w-6" />
+      </Menu.Button>
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -58,7 +56,7 @@ export default function DropDownMenu() {
                       >
                         {element.name}
                         {element.name === "Source" && (
-                          <AiFillGithub className="ml-1 h-4 w-4" />
+                          <GitHubLogoIcon className="ml-1 h-4 w-4" />
                         )}
                       </motion.li>
                     </a>

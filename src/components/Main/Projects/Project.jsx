@@ -1,7 +1,7 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
-import { AiOutlineFolder } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { CubeIcon } from "@heroicons/react/24/outline";
 
 const WorkItem = ({ work }) => {
   const { title, demo } = work;
@@ -17,7 +17,7 @@ const WorkItem = ({ work }) => {
         <h1 className="text-lg font-semibold sm:text-2xl lg:text-3xl">
           {title}
         </h1>
-        <AiOutlineFolder className="h-7 w-7 text-secondary" />
+        <CubeIcon className="h-7 w-7 text-secondary" />
         <AnimatePresence>
           {isHovered && (
             <motion.a
@@ -30,7 +30,7 @@ const WorkItem = ({ work }) => {
               transition={{ duration: 0.3 }}
               className="absolute -top-3 -right-3 grid h-7 w-7 place-items-center rounded-lg bg-dark text-dark dark:bg-light dark:text-light"
             >
-              <ArrowTopRightOnSquareIcon className="h-5 w-5" />
+              <ExternalLinkIcon className="h-5 w-5" />
             </motion.a>
           )}
         </AnimatePresence>

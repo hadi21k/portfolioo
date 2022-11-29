@@ -1,4 +1,9 @@
-import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
+import {
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+  GitHubLogoIcon,
+} from "@radix-ui/react-icons";
 
 const Social = () => {
   return (
@@ -7,29 +12,33 @@ const Social = () => {
         href="https://instagram.com/hadi21k"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
       >
-        <BsInstagram />
+        <InstagramLogoIcon className="h-6 w-6" />
       </a>
       <a
         href="https://www.linkedin.com/in/hadi-diab-564b05195/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
       >
-        <BsLinkedin />
+        <LinkedInLogoIcon className="h-6 w-6" />
       </a>
       <a
         href="https://twitter.com/hadi21k"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
       >
-        <BsTwitter />
+        <TwitterLogoIcon className="h-6 w-6" />
       </a>
       <a
         href="https://github.com/hadi21k"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
       >
-        <BsGithub />
+        <GitHubLogoIcon className="h-6 w-6" />
       </a>
     </div>
   );

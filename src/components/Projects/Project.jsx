@@ -1,6 +1,5 @@
-import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { FiExternalLink } from "react-icons/fi";
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Project = ({ work }) => {
   const { title, demo, source, img } = work;
@@ -21,10 +20,10 @@ const Project = ({ work }) => {
             <div className="flex items-center">
               <div className="flex items-center space-x-2">
                 <a href={demo} target="_blank" rel="noreferrer">
-                  <FiExternalLink className="h-5 w-5" />
+                  <ExternalLinkIcon className="h-5 w-5" />
                 </a>
                 <a href={source} target="_blank" rel="noreferrer">
-                  <AiFillGithub className="h-5 w-5" />
+                  <GitHubLogoIcon className="h-5 w-5" />
                 </a>
               </div>
             </div>

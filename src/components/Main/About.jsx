@@ -23,10 +23,10 @@ const About = () => {
         <div className="space-y-2 dark:border-dark">
           <h1 className="text-xl font-semibold md:text-2xl">Education</h1>
           <div className="space-y-1 py-2 font-semibold">
-            <h3 className="text-2xl font-bold sm:text-3xl md:text-4xl">
+            <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">
               Lebanese University{" "}
               <span className="text-sm font-semibold">2021-2024</span>
-            </h3>
+            </h2>
             <p className="sm:text-lg md:text-xl">
               Bachelor in Computer Science
             </p>

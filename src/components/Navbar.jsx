@@ -2,10 +2,10 @@ import { useState } from "react";
 import Logo from "../assets/logo.webp";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { AiFillGithub } from "react-icons/ai";
 import ThemeSwitch from "./ui/ThemeSwitch";
 import DropDownMenu from "./ui/DropDownMenu";
 import { Link } from "react-router-dom";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const elements = [
   {
@@ -39,10 +39,10 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed inset-0 z-40 h-[65px] bg-light/20 text-light dark:bg-dark/20 dark:text-dark backdrop-filter backdrop-blur-sm">
+    <div className="fixed inset-0 z-40 h-[65px] bg-light/20 text-light backdrop-blur-sm backdrop-filter dark:bg-dark/20 dark:text-dark">
       <div className="container mx-auto flex h-full items-center justify-between px-2 md:px-24 lg:px-44">
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-          <img src={Logo} alt="hadi logo" className="h-8" />
+          <img src={Logo} alt="hadi logo" width="32" />
         </Link>
         <ul className="flex items-center space-x-8 text-sm font-bold max-md:hidden">
           {elements.map((element) => (
@@ -51,6 +51,7 @@ const Navbar = () => {
               href={element.link}
               target={element.name === "Source" ? "_blank" : ""}
               rel={element.name === "Source" ? "noreferrer" : ""}
+              aria-hidden="true"
             >
               <motion.li
                 onClick={() =>
@@ -60,7 +61,7 @@ const Navbar = () => {
               >
                 {element.name}
                 {element.name === "Source" && (
-                  <AiFillGithub className="ml-2 h-4 w-4" />
+                  <GitHubLogoIcon className="ml-2 h-4 w-4" />
                 )}
                 {selected === element.name && (
                   <motion.div

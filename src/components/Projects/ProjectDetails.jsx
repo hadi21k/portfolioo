@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { useStore } from "../../context/context";
 import { db } from "../../firebase/init";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import { AiFillGithub } from "react-icons/ai";
 import Loading from "../ui/Loading";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const ProjectDetails = () => {
   const { work, setWork } = useStore();
@@ -36,7 +36,7 @@ const ProjectDetails = () => {
                 <ArrowTopRightOnSquareIcon className="h-6 w-6" />
               </a>
               <a href={source} target="_blank" rel="noreferrer">
-                <AiFillGithub className="h-6 w-6" />
+                <GitHubLogoIcon className="h-6 w-6" />
               </a>
             </div>
             <div className="flex justify-start">
