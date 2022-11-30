@@ -40,7 +40,12 @@ const ProjectDetails = () => {
               </a>
             </div>
             <div className="flex justify-start">
-              <img src={img} alt={title} className="rounded-xl" />
+              <img
+                src={img}
+                alt={title}
+                className="rounded-xl"
+                loading="lazy"
+              />
             </div>
             <div className="space-y-4 pb-4">
               <h4 className="text-lg font-semibold md:text-xl lg:text-2xl">

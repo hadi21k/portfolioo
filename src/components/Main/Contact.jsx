@@ -12,6 +12,7 @@ const Contact = () => {
   const [email, setEmail, emailAttribute] = useInput();
   const [message, setMessage, messageAttribute] = useInput();
   const [notification, setNotification] = useState("Send Message");
+  const [error, setError] = useState("");
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -31,7 +32,9 @@ const Contact = () => {
             },
           });
         } catch (err) {
-          console.error(err);
+          if (err) {
+            setError("Something went wrong, please try again later.");
+          }
         } finally {
           setName("");
           setEmail("");
@@ -104,7 +107,7 @@ const Contact = () => {
           <input
             type="submit"
             value={notification}
-            className="cursor-pointer rounded-2xl px-4 py-2 text-light border-2 border-secondary dark:text-dark"
+            className="cursor-pointer rounded-2xl border-2 border-secondary px-4 py-2 text-light dark:text-dark"
           />
         </form>
         <Social />

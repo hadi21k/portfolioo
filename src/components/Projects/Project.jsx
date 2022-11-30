@@ -11,6 +11,7 @@ const Project = ({ work }) => {
           src={img}
           alt={title}
           className="rounded-lg md:h-[188px] md:w-[300px]"
+          loading="lazy"
         />
         <div className="flex flex-1 flex-col justify-between space-y-4">
           <div className="flex max-md:justify-between md:flex-col md:space-y-2">
