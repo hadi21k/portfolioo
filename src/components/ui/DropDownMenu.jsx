@@ -14,6 +14,10 @@ const elements = [
     link: "#projects",
   },
   {
+    name: "Blogs",
+    link: "#blogs",
+  },
+  {
     name: "Contact",
     link: "#contact",
   },

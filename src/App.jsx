@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./components/Projects/ProjectDetails";
 import ProjectsHeader from "./components/Projects/ProjectsHeader";
+import BlogsHeader from "./components/Blogs/BlogsHeader";
+import BlogContent from "./pages/BlogContent";
 
 function App() {
   const { dark } = useStore();
@@ -37,6 +39,15 @@ function App() {
             <>
               <ProjectsHeader />
               <ProjectDetails />
+            </>
+          }
+        />
+        <Route
+          path="/blogs/:name"
+          element={
+            <>
+              <BlogsHeader />
+              <BlogContent />
             </>
           }
         />
