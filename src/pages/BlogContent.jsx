@@ -18,14 +18,14 @@ const BlogContent = () => {
       setBlog(date[0]);
     };
     getBlog();
-  }, [name]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-light pt-[80px] text-light dark:bg-dark dark:text-dark">
       <div className="container mx-auto space-y-8 md:px-24 lg:px-44">
-        {blog.title && (
+        {blog?.title && (
           <>
-            <h1 className="text-center text-2xl font-bold md:text-4xl lg:text-5xl">
+            <h1 className="text-center text-2xl font-bold uppercase md:text-4xl lg:text-5xl">
               {blog.title}
             </h1>
             <div className="flex justify-center space-x-4 font-semibold">
@@ -38,12 +38,15 @@ const BlogContent = () => {
             <img
               src={blog.image}
               alt={blog.title}
+              loading="lazy"
               className="h-96 w-full rounded-lg object-cover"
             />
-            <article
-              className="prose px-2 prose-headings:text-light prose-p:text-light prose-a:text-light prose-a:underline prose-a:decoration-primary prose-a:underline-offset-2 prose-code:text-red-500 prose-li:text-light dark:prose-headings:text-dark dark:prose-p:text-dark dark:prose-a:text-dark dark:prose-li:text-dark"
-              dangerouslySetInnerHTML={{ __html: blog.text }}
-            />
+            <div className="container mx-auto xl:px-28">
+              <article
+                className="prose px-2 prose-headings:text-light prose-p:text-light prose-a:text-light prose-a:underline prose-a:decoration-primary prose-a:underline-offset-2 prose-code:text-red-500 prose-li:text-light dark:prose-headings:text-dark dark:prose-p:text-dark dark:prose-a:text-dark dark:prose-li:text-dark max-sm:prose-headings:text-2xl"
+                dangerouslySetInnerHTML={{ __html: blog.text }}
+              />
+            </div>
           </>
         )}
       </div>

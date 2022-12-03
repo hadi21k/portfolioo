@@ -30,20 +30,18 @@ const BlogsSection = () => {
         <h1 className="overflow-hidden pb-8 pt-2 text-2xl font-semibold text-light dark:text-dark md:text-3xl">
           <TitleAnimation word="Blogs" />
         </h1>
-        <div className="grid xl:grid-cols-2">
-          {blogs.map((blog, i) => (
-            <Blog key={i} blog={blog} />
-          ))}
-        </div>
-        {blogs.length > 4 && (
-          <Link to="/blogs" onClick={() => window.scrollTo(0, 0)}>
-            <div className="group mt-4 flex items-center space-x-1 text-light dark:text-dark">
-              <span>Veiw all Blogs</span>
-              <ArrowRightIcon className="h-4 w-4 transition duration-200 group-hover:translate-x-1" />
-            </div>
-          </Link>
-        )}
+        {blogs.map((blog, i) => (
+          <Blog key={i} blog={blog} />
+        ))}
       </div>
+      {blogs.length > 4 && (
+        <Link to="/blogs" onClick={() => window.scrollTo(0, 0)}>
+          <div className="group mt-4 flex items-center space-x-1 text-light dark:text-dark">
+            <span>Veiw all Blogs</span>
+            <ArrowRightIcon className="h-4 w-4 transition duration-200 group-hover:translate-x-1" />
+          </div>
+        </Link>
+      )}
     </main>
   );
 };
