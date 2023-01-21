@@ -1,26 +1,7 @@
-import { motion, useScroll } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-import useParallax from "../hooks/useParallax";
+import { motion } from "framer-motion";
 import BlurryBg from "./ui/BlurryBg";
 
 const Hero = () => {
-  const ref = useRef();
-  const [width, setwidth] = useState(window.innerWidth);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useParallax(scrollYProgress, 0, 1, "125%");
-
-  useEffect(() => {
-    const unsub = window.addEventListener("resize", () => {
-      setwidth(window.innerWidth);
-    });
-
-    return window.removeEventListener("resize", unsub);
-  }, []);
-
   const parent = {
     animate: {
       transition: {
@@ -55,17 +36,13 @@ const Hero = () => {
   };
 
   return (
-    <div
-      ref={ref}
-      className="relative min-h-screen overflow-hidden bg-light pt-[40px] text-light dark:bg-dark dark:text-dark"
-    >
+    <div className="relative min-h-screen overflow-hidden bg-white text-light dark:bg-black dark:text-dark">
       <BlurryBg />
       <motion.div
-        style={{ y: width > 768 ? y : "" }}
         variants={parent}
         initial="hidden"
         animate="animate"
-        className="container mx-auto flex min-h-screen flex-col justify-center space-y-2 overflow-hidden px-2 leading-tight tracking-wide md:px-24 lg:px-44"
+        className="container relative mx-auto flex min-h-screen flex-col items-start justify-center space-y-2 overflow-hidden px-2 leading-tight tracking-wide md:px-24 lg:px-44"
       >
         <motion.h1
           variants={children1}
