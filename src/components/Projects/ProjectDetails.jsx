@@ -24,7 +24,7 @@ const ProjectDetails = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-light pt-[85px] text-light dark:bg-dark dark:text-dark">
+    <div className="min-h-screen bg-light-1 pt-[85px] text-light dark:bg-dark dark:text-dark">
       <div className="container mx-auto space-y-7 px-2 md:px-24 lg:px-44">
         {title === name ? (
           <>

@@ -5,7 +5,7 @@ const Blog = ({ blog }) => {
   const { title, date, time } = blog;
   return (
     <Link to={`/blogs/${title}`} onClick={() => window.scrollTo(0, 0)}>
-      <div className="relative rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 text-light shadow-md transition-all duration-300 hover:p-1 dark:text-dark">
+      <div className="relative rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 text-light shadow-md dark:text-dark">
         <div className="space-y-4 rounded bg-light-1 p-4 dark:bg-dark-1">
           {title && (
             <>

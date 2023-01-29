@@ -43,8 +43,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed inset-0 z-40 h-[65px] bg-light/20 text-light backdrop-blur-sm backdrop-filter dark:bg-dark/20 dark:text-dark">
-      <div className="container mx-auto flex h-full items-center justify-between px-2 md:px-24 lg:px-44">
+    <div className="fixed inset-0 z-40 h-[65px]">
+      <div className="container mx-auto flex h-full items-center justify-between px-2 md:px-24 lg:px-44 bg-light/20 text-light backdrop-blur-sm backdrop-filter dark:bg-dark/20 dark:text-dark">
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <img src={Logo} alt="hadi logo" width="32" height="32" />
         </Link>
