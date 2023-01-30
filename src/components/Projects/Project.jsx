@@ -6,7 +6,7 @@ const Project = ({ work }) => {
 
   return (
     <div className="min-h-48 rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 text-light dark:text-dark">
-      <div className="flex h-full bg-ligh-1 p-2 dark:bg-dark max-md:flex-col max-md:space-y-4 md:space-x-5">
+      <div className="flex h-full bg-light-1 p-2 dark:bg-dark max-md:flex-col max-md:space-y-4 md:space-x-5">
         <img
           src={img}
           alt={title}
