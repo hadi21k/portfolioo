@@ -18,7 +18,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-light pt-[85px] text-light dark:bg-dark dark:text-dark">
+    <div className="min-h-screen bg-light-1 pb-8 pt-[85px] text-light dark:bg-dark dark:text-dark">
       <div className="container mx-auto space-y-8 px-2 md:px-24 lg:px-44">
         <Items />
       </div>

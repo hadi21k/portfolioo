@@ -41,7 +41,7 @@ const BlogContent = () => {
               loading="lazy"
               className="h-96 w-full rounded-lg object-cover"
             />
-            <div className="container mx-auto xl:px-28">
+            <div className="container mx-auto">
               <article
                 className="prose px-2 prose-headings:text-light prose-p:text-light prose-a:text-light prose-a:underline prose-a:decoration-primary prose-a:underline-offset-2 prose-code:text-red-500 prose-li:text-light dark:prose-headings:text-dark dark:prose-p:text-dark dark:prose-a:text-dark dark:prose-li:text-dark max-sm:prose-headings:text-2xl"
                 dangerouslySetInnerHTML={{ __html: blog.text }}
