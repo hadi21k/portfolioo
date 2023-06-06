@@ -11,6 +11,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <App />
       </Router>
     </StoreProvider>
-    <Analytics />
   </React.StrictMode>
 );
