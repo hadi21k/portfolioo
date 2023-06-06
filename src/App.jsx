@@ -9,7 +9,6 @@ import ProjectsHeader from "./components/Projects/ProjectsHeader";
 import BlogsHeader from "./components/Blogs/BlogsHeader";
 import BlogContent from "./pages/BlogContent";
 
-
 function App() {
   const { dark } = useStore();
 
