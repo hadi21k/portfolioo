@@ -43,15 +43,6 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/blogs/:name"
-          element={
-            <>
-              <BlogsHeader />
-              <BlogContent />
-            </>
-          }
-        />
       </Routes>
     </div>
   );
